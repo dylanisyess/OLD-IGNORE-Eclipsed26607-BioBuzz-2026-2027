@@ -58,35 +58,30 @@ public class Robot {
 
     public void init(HardwareMap hardwareMap) {
         frontLeft = hardwareMap.get(DcMotor.class, "frontLeft");
-        frontRight = hardwareMap.get(DcMotor.class, "frontRight");
-        backLeft = hardwareMap.get(DcMotor.class, "backLeft");
-        backRight = hardwareMap.get(DcMotor.class, "backRight");
-        motors = Arrays.asList(frontLeft, frontRight, backLeft, backRight);
+//        frontRight = hardwareMap.get(DcMotor.class, "frontRight");
+//        backLeft = hardwareMap.get(DcMotor.class, "backLeft");
+//        backRight = hardwareMap.get(DcMotor.class, "backRight");
+//        motors = Arrays.asList(frontLeft, frontRight, backLeft, backRight);
+          motors = Arrays.asList(frontLeft);
+//        frontLeftServo = hardwareMap.get(CRServo.class, "frontLeftServo");
+//        frontRightServo = hardwareMap.get(CRServo.class, "frontRightServo");
+//        backLeftServo = hardwareMap.get(CRServo.class, "backLeftServo");
+//        backRightServo = hardwareMap.get(CRServo.class, "backRightServo");
 
-        frontLeftServo = hardwareMap.get(CRServo.class, "frontLeftServo");
-        frontRightServo = hardwareMap.get(CRServo.class, "frontRightServo");
-        backLeftServo = hardwareMap.get(CRServo.class, "backLeftServo");
-        backRightServo = hardwareMap.get(CRServo.class, "backRightServo");
+//        frontLeftLamprey = hardwareMap.get(AnalogInput.class, "frontLeftLamprey");
+//        frontRightLamprey = hardwareMap.get(AnalogInput.class, "frontRightLamprey");
+//        backLeftLamprey = hardwareMap.get(AnalogInput.class, "backLeftLamprey");
+//        backRightLamprey = hardwareMap.get(AnalogInput.class, "backRightLamprey");
 
-        frontLeftLamprey = hardwareMap.get(AnalogInput.class, "frontLeftLamprey");
-        frontRightLamprey = hardwareMap.get(AnalogInput.class, "frontRightLamprey");
-        backLeftLamprey = hardwareMap.get(AnalogInput.class, "backLeftLamprey");
-        backRightLamprey = hardwareMap.get(AnalogInput.class, "backRightLamprey");
-
-        intake = hardwareMap.get(DcMotor.class, "intake");
-        shooter = hardwareMap.get(DcMotorEx.class, "shooter");
+//        intake = hardwareMap.get(DcMotor.class, "intake");
+//        shooter = hardwareMap.get(DcMotorEx.class, "shooter");
 
         frontLeft.setDirection(Direction.REVERSE);
-        frontRight.setDirection(Direction.FORWARD);
-        backLeft.setDirection(Direction.REVERSE);
-        backRight.setDirection(Direction.FORWARD);
-        intake.setDirection(Direction.REVERSE);
-        shooter.setDirection(Direction.REVERSE);
-
-        frontLeft.setZeroPowerBehavior(ZeroPowerBehavior.BRAKE);
-        frontRight.setZeroPowerBehavior(ZeroPowerBehavior.BRAKE);
-        backLeft.setZeroPowerBehavior(ZeroPowerBehavior.BRAKE);
-        backRight.setZeroPowerBehavior(ZeroPowerBehavior.BRAKE);
+//        frontRight.setDirection(Direction.FORWARD);
+//        backLeft.setDirection(Direction.REVERSE);
+//        backRight.setDirection(Direction.FORWARD);
+//        intake.setDirection(Direction.REVERSE);
+//        shooter.setDirection(Direction.REVERSE);
 
         imu = hardwareMap.get(IMU.class, "imu");
         imu.initialize(new IMU.Parameters(
